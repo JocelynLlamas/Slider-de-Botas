@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script defer src="slider.js"></script>
+    <script src="https://kit.fontawesome.com/e4c5f4b000.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="movimientoAutomatico()">
+    <section class="fondo">
+        <div class="tituloSlider">SLIDER BOTAS</div>
+        <section class="cajaContenedora">
+            <!-- IMAGENES -->
+            <div class="slider">
+                <div class="seccionSlider">
+                    <img src="img1.jpg" alt="imagen1" class="img">
+                    <h1 class="titulo">Primer Foto</h1>
+                    <p class="descripcion">Este es el modelo número 1 de botas</p>
+                </div>
+                <div class="seccionSlider">
+                    <img src="img2.jpg" alt="imagen2" class="img">
+                    <h1 class="titulo" style="margin-left: 400px;">Segunda Foto</h1>
+                    <p class="descripcion" style="margin-left: 390px;">Este es el modelo número 2 de botas</p>
+                </div>
+                <div class="seccionSlider">
+                    <img src="img3.jpg" alt="imagen3" class="img">
+                    <h1 class="titulo" style="margin-left: 380px;">Tercer Foto</h1>
+                    <p class="descripcion" style="margin-left: 350px;">Este es el modelo número 3 de botas</p>
+                </div>
+                <div class="seccionSlider">
+                    <img src="img4.jpg" alt="imagen4" class="img">
+                    <h1 class="titulo" style="margin-left: 380px; color: red;">Cuarta Foto</h1>
+                    <p class="descripcion" style="margin-left: 350px;">Este es el modelo número 4 de botas</p>
+                </div>
+            </div>
+            <!-- PUNTOS -->
+            <ul class="indices">
+                <li class="indice activo"></li>
+                <li class="indice"></li>
+                <li class="indice"></li>
+                <li class="indice"></li>
+            </ul>
+            <!-- FLECHAS -->
+            <div class="flecha flechaIzquierda" id="flechaIzq" onclick="movimientoIzquierda()"><i class="fas fa-chevron-left" id="arrow"></i></div>
+            <div class="flecha flechaDerecha" id="flechaDer" onclick="movimientoDerecha()"><i class="fas fa-chevron-right" id="arrow"></i></div>
+        </section>
+    </section>
+</body>
+
+</html>

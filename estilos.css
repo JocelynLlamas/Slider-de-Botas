@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.tituloSlider{
+    font-family: 'Creepster', cursive;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 0px;
+    font-size: 4em;
+    color: lawngreen;
+}
+
+.titulo{
+    font-family: 'Ramabhadra', sans-serif;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: -120px;
+    font-size: 1.5em;
+    
+    /* TANSICION */
+    transform: translateY(-180%);
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.descripcion{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1em; 
+    color: #999999;
+    width: 20%;
+    margin-left: 125px; /*125px*/
+
+    /* TANSICION */
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.fondo{
+    /* Para ponerlo hasta abajo de los otros elementos */
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 600px;
+}
+
+.cajaContenedora{
+    /* background-color: beige; */
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider{
+    /* CONTIENE A LAS IMAGENES Y POR ESO ES EL DOBLE DE GRANDE DE WIDTH QUE LA CAJA CONTENEDORA */
+    width: 400%; 
+    /* background-color: orange; */
+    /* PARA PONER UNA IMAGEN A LADO DE LA OTRA */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* TANSICION */
+    transition: all 1s ease;
+    transform: translateX(0%);
+}
+
+.img{
+    /* PARA EL ANCHO DIVIDIMOS EL 100% ENTRE EL NUMERO DE IMAGENES QUE TENEMOS */
+    margin-top: 0px;
+    width: 100%;
+    background-color: palegreen;
+}
+
+.seccionSlider{
+    /* PARA EL ANCHO DIVIDIMOS EL 100% ENTRE EL NUMERO DE IMAGENES QUE TENEMOS */
+    width: 400%;
+    /* background-color: palegreen; */
+}
+
+.indices{
+    margin-top: 32px;
+    width: 100%;
+    /* background-color: red; */
+    padding: .4em;
+
+    /* PARA PONER UN PUNTO A LADO DEL OTRO */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.indices .indice{
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #999999;
+    margin: 1em;
+    list-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indice.activo{
+    background-color: lawngreen;
+}
+
+.indice:hover{
+    background-color: lawngreen;
+}
+
+.flecha{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: #999999;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.flecha:hover{
+    background:chartreuse;
+}
+
+.flecha:hover #arrow{
+    color: black;
+}
+
+.flechaIzquierda{
+    left: 10px;
+}
+
+.flechaDerecha{
+    right: 10px ;
+}
+
+#arrow{
+    margin-top: 10px;
+    color: white;
+}
